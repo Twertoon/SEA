@@ -27,13 +27,11 @@ Original mod link in Steam Workshop (doesn't work) https://steamcommunity.com/sh
  *  Change the value to the desired value 9000 on the **<add key = "port" value = "9000" />**
  *  In file **"Utilities\netsh.update.bat"** change the value of 9000, on the desired value in the **"set port = 9000"**
 2.  Run **"Utilities\netsh.update.bat"** from administrator
+3.  Add inbound and outbound rule to selected port in firewall
 
 ###   The order of updating from the old version:
 1.  Delete the directory **"web"** in the root directory of the server **"SEA.P.dll"**
 2.  Copy the configuration file **"storage.s3db"** in the directory **".\Bin64"**
 
--
-
 ##   ! Warning !
 * If you run the MOD (**SEA.GM**) without connected plugin server (**SEA.P.dll**), it is raise an **error** when you try to save the game. ***(Saving files will not be damaged)***.
-
