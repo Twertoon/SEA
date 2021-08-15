@@ -1,5 +1,5 @@
 # S.E.A.
-S.E.A. - Space Engineer Assistant, Workshop mod for the game "Space Engineers" 
+S.E.A. - Space Engineer Assistant, Workshop mod for the game "Space Engineers" https://steamcommunity.com/sharedfiles/filedetails/?id=2576035850
 
 My working version from https://github.com/OniVe/S.E.A./releases  
 Original mod link in Steam Workshop (doesn't work) https://steamcommunity.com/sharedfiles/filedetails/?id=680600621
