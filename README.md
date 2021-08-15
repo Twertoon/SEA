@@ -23,7 +23,7 @@ Original mod link in Steam Workshop (doesn't work) https://steamcommunity.com/sh
 
 ###   Server configuration:
 1.  Set the port (if necessary) [9000 by default]
- *  Open file **"SAMP.dll.config"** located in the directory of the game **".\Bin64"** via notepad
+ *  Open file **"SEA.P.dll.config"** located in the directory of the game **".\Bin64"** via notepad
  *  Change the value to the desired value 9000 on the **<add key = "port" value = "9000" />**
  *  In file **"Utilities\netsh.update.bat"** change the value of 9000, on the desired value in the **"set port = 9000"**
 2.  Run **"Utilities\netsh.update.bat"** from administrator
