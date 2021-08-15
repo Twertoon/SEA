@@ -28,7 +28,7 @@ Original mod link in Steam Workshop (doesn't work) https://steamcommunity.com/sh
 2.  Add inbound and outbound rule to selected port in firewall
 
 ###   The order of updating from the old version:
-1.  Delete the directory **"web"** in the root directory of the server **"SEA.P.dll"**
+1.  Delete the directory **"web"** in the root directory of the server **"SEA.P.dll"**  (.\Bin64)
 2.  Copy the configuration file **"storage.s3db"** in the directory **".\Bin64"**
 
 ##   ! Warning !
