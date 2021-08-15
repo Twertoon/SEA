@@ -4,6 +4,9 @@ S.E.A. - Space Engineer Assistant, Workshop mod for the game "Space Engineers"
 My working version from https://github.com/OniVe/S.E.A.  
 Original mod link in Steam Workshop (doesn't work) https://steamcommunity.com/sharedfiles/filedetails/?id=680600621
 
+![Work example 1](https://github.com/Twertoon/SEA/blob/master/gif%20example/ezgif.com-gif-maker.gif)  
+![Work example 2](https://github.com/Twertoon/SEA/blob/master/gif%20example/ezgif.com-gif-maker%20(1).gif)
+
 ###   Server installation *(Steam client)*:
 1.  Download the server **SEA.P** (and game MOD **SEA.GM**)
 2.  Unpack the archive file
