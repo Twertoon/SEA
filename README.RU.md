@@ -1,7 +1,7 @@
 # S.E.A.
 S.E.A. - Space Engineer Assistant, Workshop mod Для игры "Space Engineers" 
 
-Моя рабочая версия https://github.com/OniVe/S.E.A.  
+Моя рабочая версия https://github.com/OniVe/S.E.A./releases  
 Оригинальная ссылка на мод в Steam Workshop (не работает) https://steamcommunity.com/sharedfiles/filedetails/?id=680600621
 
 ![Пример работы 1](https://github.com/Twertoon/SEA/blob/master/gif%20example/ezgif.com-gif-maker.gif)  
