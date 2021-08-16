@@ -4,7 +4,7 @@ S.E.A. - Space Engineer Assistant, Workshop mod for the game "Space Engineers" h
 My working version from https://github.com/OniVe/S.E.A./releases  
 Original mod link in Steam Workshop (doesn't work) https://steamcommunity.com/sharedfiles/filedetails/?id=680600621
 
-![Video](https://www.youtube.com/watch?v=VR_LhpU5-vw)  
+Video demonstration: https://www.youtube.com/watch?v=VR_LhpU5-vw  
 ![Work example 1](https://github.com/Twertoon/SEA/blob/master/gif%20example/ezgif.com-gif-maker.gif)  
 ![Work example 2](https://github.com/Twertoon/SEA/blob/master/gif%20example/ezgif.com-gif-maker%20(1).gif)
 
