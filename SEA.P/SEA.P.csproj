@@ -197,6 +197,8 @@
     <EmbeddedResource Include="Web\Content\data\lang_sea-ui_ru_info.json" />
     <EmbeddedResource Include="Web\Content\data\lang_sea-indicators_en_dictionary.json" />
     <EmbeddedResource Include="Web\Content\data\lang_sea-indicators_ru_dictionary.json" />
+    <None Include="Scripts\jquery-3.6.0.min.map" />
+    <None Include="Scripts\jquery-3.6.0.slim.min.map" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Web\Content\html\index.html" />
@@ -238,6 +240,16 @@
     <Content Include="lib\Microsoft.AspNet.SignalR.SystemWeb.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Scripts\jquery-1.6.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.6.4.js" />
+    <Content Include="Scripts\jquery-1.6.4.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.intellisense.js" />
+    <Content Include="Scripts\jquery-3.6.0.js" />
+    <Content Include="Scripts\jquery-3.6.0.min.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.js" />
+    <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.2.js" />
+    <Content Include="Scripts\jquery.signalR-2.4.2.min.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
