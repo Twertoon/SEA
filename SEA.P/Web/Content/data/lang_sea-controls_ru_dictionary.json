@@ -24,5 +24,7 @@
 "#sea-control-handwheel": "Маховичок (Альфа)",
 "#sea-control-handwheel-convert": "Конвертировать",
 "#sea-control-handwheel-convert-pix2": "0-360°",
-"#sea-control-handwheel-convert-pm_pi": "± 180°"
+"#sea-control-handwheel-convert-pm_pi": "± 180°",
+"#sea-controls-new": "Новые элементы",
+"#sea-control-slider-new": "Новый слайдер"
 }

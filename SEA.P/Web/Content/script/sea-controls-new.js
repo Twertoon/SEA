@@ -432,7 +432,8 @@ $.widget( "controlunit.sea_slider", $.sea_ui.controlunit, {
 			touchKey    : vertical ? "pageY" : "pageX",
 			myPosPrefix : vertical ? "left top+" : "left+",
 			myPosSuffix : vertical ? "" : " top",
-		    useMetricPrefix: this.options.metricPrefix < 999
+		    useMetricPrefix: this.options.metricPrefix < 999,
+			//startPos: 0
 		};
 		this.touchPositionUsing = $.proxy(function ( pos ){
 					
@@ -463,10 +464,24 @@ $.widget( "controlunit.sea_slider", $.sea_ui.controlunit, {
 		this._syncValue();
         
 		this._on( this.element, {
-			"touchstart .track": "_pointerDown",
-			"touchmove .track": "_pointerMove",
-			"touchend .track": "_pointerUp"
-		});
+			"pointerdown .track": "_pointerDown",
+			"pointermove .track": "_pointerMove",
+			"pointerleave .track": "_pointerLeave",
+			"pointerup .track": "_pointerUp"
+		});		
+		//div.sea-controlunit.sea-slider
+		/*
+		var src = document.querySelector("div.sea-controlunit.sea-slider");
+		src.addEventListener('touchmove', function(e) {
+			// Iterate through the touch points that have moved and log each
+			// of the pageX/Y coordinates. The unit of each coordinate is CSS pixels.
+			var i;
+			for (i=0; i < e.changedTouches.length; i++) {
+			  //console.log("touchpoint[" + i + "].pageX = " + e.changedTouches[i].pageX);
+			  //console.log("touchpoint[" + i + "].pageY = " + e.changedTouches[i].pageY);			  
+			}
+		  }, false);*/
+		
 	},
 	_destroy: function (){
 
@@ -543,37 +558,74 @@ $.widget( "controlunit.sea_slider", $.sea_ui.controlunit, {
 
 	        this.slider.attr('class', 'slider pointerdown');
 	        //this.settings.startPos = this.slider.position()[this.settings.posKey] - event.originalEvent.targetTouches[0][this.settings.touchKey];
-	        this.settings.startPos = 0 - event.originalEvent.targetTouches[0][this.settings.touchKey];
-
+	        this.settings.startPos = this.slider.position()[this.settings.posKey] - event.pageY;
+			//this._positionToValue(event);			
+			/*
+			this.onpointermove = slide;
+			this.setPointerCapture;
+			function slide(event) {
+				slider.style.transform = `translate(${event.clientY - 70}px)`;
+			  }*/
+			//this.settings.startPos = 0 - event.originalEvent.targetTouches[0][this.settings.touchKey];
+			//var test = event.pagey
+			//console.log(this.settings.startPos);			
+		    //console.log("long " + event.originalEvent.targetTouches[0][this.settings.touchKey]);
+			//console.log(this.settings.startPos + " " + this.slider.position()[this.settings.posKey] + " " + event.originalEvent.targetTouches[0][this.settings.touchKey]);
+			//console.log(this.settings.startPos + " " + this.slider.position()[this.settings.posKey] + " " + event.originalEvent.clientY);
+            //console.log(event.pageY);
+			//console.log(event.originalEvent.clientY);
+			//document.body.classList.add("stop-scrolling");
 	        return false;
 	    }
 	},
 	_pointerMove: function ( event ){
+		//this.settings.startPos = this.slider.position()[this.settings.posKey] - event.pageY
+		this.slider.attr('class', 'slider pointermove');
 		
 		if(this._allowEvents(event)){
 
+			/*this.style.transform = `translate(${event.clientY - 70}px)`;*/
 		    this.slider.position({
 		        within: this.track,
 		        of: this.track,
-		        at: "left top",
-		        my: this.settings.myPosPrefix + (this.settings.startPos + event.originalEvent.targetTouches[0][this.settings.touchKey]) + this.settings.myPosSuffix,
+		        at: "left top",				
+				my: this.settings.myPosPrefix + (this.settings.startPos + event.pageY) + this.settings.myPosSuffix,
+		        //my: this.settings.myPosPrefix + (this.settings.startPos + event.originalEvent.targetTouches[0][this.settings.touchKey]) + this.settings.myPosSuffix,
 		        collision: "fit fit",
 		        using: this.touchPositionUsing
 		    });
+            //console.log(this.settings.startPos);			
+		    //console.log("long " + event.originalEvent.targetTouches[0][this.settings.touchKey]);
+			return false;
+		}
+	},
 
+	_pointerLeave: function ( event ){
+		
+		if(this._allowEvents(event)){
+
+		    this.slider.attr('class', 'slider pointerleave');
+		    this.settings.lastTouchEnd = event.timeStamp;
+
+			
+				
 		    return false;
 		}
 	},
+
 	_pointerUp: function ( event ){
 		
 		if(this._allowEvents(event)){
 
 		    this.slider.attr('class', 'slider pointerup');
-		    if ((event.timeStamp - this.settings.lastTouchEnd) > 250)/* 250ms */
+			this.onpointermove = null;
+			this.releasePointerCapture;
+			if ((event.timeStamp - this.settings.lastTouchEnd) > 250)/* 250ms */
 		        this.settings.lastTouchEnd = event.timeStamp;
 		    else
-		        this._doubleTap();
-
+		        this._doubleTap();			
+			
+				
 		    return false;
 		}
 	},
@@ -639,7 +691,7 @@ $.widget( "controlunit.sea_slider", $.sea_ui.controlunit, {
 				at: "left top",
 				my: this.settings.myPosPrefix + this.settings.pos + this.settings.myPosSuffix,
 				collision: "fit fit",
-				using: this.usingSliderValueToPosition
+				//using: this.usingSliderValueToPosition
 			});
 			return true;
 		}
