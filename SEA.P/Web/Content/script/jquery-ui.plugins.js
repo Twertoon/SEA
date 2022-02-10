@@ -11,7 +11,7 @@
 /**
   * "sea_ui" Widgets
   * Copyright 2016, "OniVe" Igor Kuritsin
-  * Copyright 2021, Fixed by Twertoon
+  * Copyright 2021, 2022 Fixed by Twertoon
   * Dual licensed under the MIT and GPL licenses.
   *
   **/
