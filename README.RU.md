@@ -1,6 +1,8 @@
 # S.E.A.
 S.E.A. - Space Engineer Assistant, Workshop mod Для игры "Space Engineers" https://steamcommunity.com/sharedfiles/filedetails/?id=2576035850
 
+Этот мод позволяет вам управлять кораблями и станциями из браузера. Для этого у них должна быть антенна и хотя бы один блок в вашей собственности.
+
 Моя рабочая версия https://github.com/OniVe/S.E.A./releases  
 Оригинальная ссылка на мод в Steam Workshop (не работает) https://steamcommunity.com/sharedfiles/filedetails/?id=680600621
 

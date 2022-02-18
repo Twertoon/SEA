@@ -1,6 +1,8 @@
 # S.E.A.
 S.E.A. - Space Engineer Assistant, Workshop mod for the game "Space Engineers" https://steamcommunity.com/sharedfiles/filedetails/?id=2576035850
 
+This mod allows you to manage ships and stations from the browser. For this, they must have an antenna and at least one unit in your property.
+
 Русское описание: https://github.com/Twertoon/SEA/blob/master/README.RU.md
 
 My working version from https://github.com/OniVe/S.E.A./releases  
